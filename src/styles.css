@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "SF UI";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/sf-ui.woff") format("woff");
+}
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html {
+    @apply bg-dark text-white font-sans;
+}
+
+body {
+    @apply font-sans;
+}
