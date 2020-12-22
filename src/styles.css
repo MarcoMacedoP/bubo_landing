@@ -12,13 +12,12 @@
 }
 
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 html {
     @apply bg-dark text-white font-sans;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,12 +25,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
 }
-.underline {
-    text-decoration: none;
-    padding-bottom: 1px;
-    border-bottom: 2px solid red;
-    @apply border-primary;
-}
+
 nav {
     background-color: red;
     z-index: 99;
@@ -70,10 +64,11 @@ nav {
 }
 .menu a,
 .close-btn {
-    @apply block font-serif text-lg cursor-pointer;
+    @apply block font-serif text-lg cursor-pointer border-0;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 200ms linear;
+    transition-property: opacity, color, border;
 }
 .menu .close-btn {
     @apply absolute;
@@ -93,7 +88,7 @@ nav {
 .close-btn:active,
 .menu a:focus,
 .close-btn:focus {
-    @apply text-primary;
+    @apply text-primary border-primary border-0 border-b-2;
 }
 
 /** buttons  **/
@@ -174,15 +169,15 @@ li {
 }
 /** Backgrounds */
 .background-one {
-    background-image: url("../assets/img/bg-1.png");
+    background-image: url("../assets/img/bg-1.svg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
     position: absolute;
     bottom: 0;
-    left: -3rem;
+    left: -6rem;
     right: 0;
-    height: 120vh;
+    height: 130vh;
     width: 120vw;
 }
 

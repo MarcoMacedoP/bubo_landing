@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <link
@@ -15,15 +14,17 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
 
-    <body>
+    <body id="about">
         <nav
-            class="w-full | sticky top-0 | px-12  py-4 | bg-dark | flex justify-between items-center shadow-md bg-dark"
+            class="w-full | sticky top-0 | px-12 py-4 | bg-dark | flex justify-between items-center shadow-md bg-dark"
         >
-            <img
-                class="w-24"
-                src="./../assets/img/logo.png"
-                alt="Bubo protocol platform logo"
-            />
+            <a href="#about">
+                <img
+                    class="w-24"
+                    src="./../assets/img/logo.png"
+                    alt="Bubo protocol platform logo"
+                />
+            </a>
             <svg
                 class="menu-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,11 +37,11 @@
             <div class="menu">
                 <div class="content">
                     <div class="close-btn">X</div>
-                    <a href="#" class="underline text-primary">About</a>
-                    <a href="#">How it works</a>
-                    <a href="#">Token</a>
-                    <a href="#">Roadmap</a>
-                    <a href="#">Team</a>
+                    <a href="#about">About</a>
+                    <a href="#work">How it works</a>
+                    <a href="#token">Token</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#team">Team</a>
                 </div>
             </div>
             <div class="hidden lg:flex w-2/8">
@@ -53,7 +54,7 @@
             <section class="section lg:flex lg:pt-12">
                 <img
                     src="../assets/img/buho.png"
-                    class="w-full object-contain object-center lg:w-2/3 animate__animated animate__pulse animate__infinite animate__slower"
+                    class="w-full object-contain object-center lg:w-2/3 animate__animated animate__pulse animate__infinite"
                 />
                 <article class="flex flex-col w-full">
                     <h1 class="text-3xl text-white font-serif w-full">
@@ -88,7 +89,7 @@
                 </article>
             </section>
 
-            <section class="section relative">
+            <section class="section relative" id="work">
                 <div class="background-one"></div>
                 <div class="w-full lg:w-2/3 lg:mx-auto">
                     <img
@@ -123,7 +124,11 @@
                 </div>
             </section>
 
-            <section class="section bg-cover bg-center" style="background-image: url(../assets/img/bg-2.png);">
+            <section
+                class="section bg-cover bg-center"
+                style="background-image: url(../assets/img/bg-2.png)"
+                id="token"
+            >
                 <div class="w-full lg:w-2/3 lg:mx-auto">
                     <h3 class="text-3xl mb-4 lg:pt-20">Token sale details</h3>
                     <p class="text-gray mb-12">
@@ -161,7 +166,11 @@
                 </div>
             </section>
 
-            <section class="section bg-cover bg-top" style="background-image: url(../assets/img/bg-3.png);">
+            <section
+                class="section bg-cover bg-top"
+                style="background-image: url(../assets/img/bg-3.png)"
+                id="roadmap"
+            >
                 <article class="w-full lg:w-2/3 lg:mx-auto">
                     <h4 class="text-3xl text-center mb-12 lg:pt-20">
                         Pre-Sales <span class="text-primary">Bonus Token</span>
@@ -289,7 +298,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section class="section" id="team">
                 <div class="w-full lg:w-2/3 lg:mx-auto">
                     <h6 class="text-3xl mb-4 lg:text-center">
                         Our <span class="text-primary">Team</span>
@@ -325,11 +334,13 @@
         </main>
 
         <footer class="bg-gray-dark w-full p-8 flex justify-between lg:p-12">
-            <img
-                class="w-24 object-contain"
-                src="./../assets/img/logo.png"
-                alt="Bubo protocol platform logo"
-            />
+            <a href="#">
+                <img
+                    class="w-24 object-contain"
+                    src="./../assets/img/logo.png"
+                    alt="Bubo protocol platform logo"
+                />
+            </a>
             <div class="ml-12 flex flex-wrap w-full justify-between lg:ml-24">
                 <div class="flex flex-col mr-4">
                     <p class="font-bold">Useful Links</p>
@@ -341,8 +352,17 @@
                 <div class="flex flex-col mr-4">
                     <p class="font-bold">Documents</p>
                     <a class="text-gray" href="#">Whitepaper</a>
-                    <a class="text-gray" href="#">Privacy Policy</a>
-                    <a class="text-gray" href="#">Terms of Use</a>
+                    <a
+                        class="text-gray"
+                        href="../assets/docs/AVISO_DE_PRIVACIDAD_BUBO_INGLES.pdf"
+                        target="__blank"
+                        >Privacy Policy</a
+                    >
+                    <a
+                        class="text-gray"
+                        href="../assets/docs/BUBO_Terminos_y_condiciones_INGLES.pdf"
+                        target="__blank"
+                        >Terms of Use</a >
                 </div>
                 <div class="flex flex-col mr-4">
                     <p class="font-bold">Address</p>
@@ -351,9 +371,18 @@
                 </div>
                 <div class="flex flex-col mr-4">
                     <p class="font-bold">Connect</p>
-                    <a class="text-gray" href="#">info@bubo.com</a>
+                    <a
+                        class="text-gray"
+                        href="mailto:buboprotocol@gmail.com"
+                        target="__blank"
+                        >info@bubo.com</a
+                    >
+
                     <div class="flex w-full items-center justify-between">
-                        <a href="#">
+                        <a
+                            href="https://medium.com/@buboprotocol"
+                            target="__blank"
+                        >
                             <img
                                 src="../assets/icons/medium.png"
                                 class="object-contain w-4 object-center"
@@ -371,13 +400,16 @@
                                 class="object-contain w-4 object-center"
                             />
                         </a>
-                        <a href="#">
+                        <a
+                            href="https://twitter.com/buboprotocol"
+                            target="__blank"
+                        >
                             <img
                                 src="../assets/icons/twitter.png"
                                 class="object-contain w-4 object-center"
                             />
                         </a>
-                        <a href="#">
+                        <a href="https://t.me/Buboprotocol" target="__blank">
                             <img
                                 src="../assets/icons/direct.png"
                                 class="object-contain w-4 object-center"
