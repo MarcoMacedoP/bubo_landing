@@ -2,14 +2,391 @@
 
 <html lang="en">
     <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <meta charset="utf-8" />
-
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
         <title>Bubo</title>
-
         <link rel="stylesheet" href="styles.css" />
     </head>
 
     <body>
-        hello there
+        <nav
+            class="w-full | sticky top-0 | px-12  py-4 | bg-dark | flex justify-between items-center shadow-md bg-dark"
+        >
+            <img
+                class="w-24"
+                src="./../assets/img/logo.png"
+                alt="Bubo protocol platform logo"
+            />
+            <svg
+                class="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                focusable
+                viewBox="0 0 24 24"
+            >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
+            <div class="menu">
+                <div class="content">
+                    <div class="close-btn">X</div>
+                    <a href="#" class="underline text-primary">About</a>
+                    <a href="#">How it works</a>
+                    <a href="#">Token</a>
+                    <a href="#">Roadmap</a>
+                    <a href="#">Team</a>
+                </div>
+            </div>
+            <div class="hidden lg:flex w-2/8">
+                <a class="button mr-4" href="">Whitepaper</a>
+                <a class="button-primary" href="">Buy Token</a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="section lg:flex lg:pt-12">
+                <img
+                    src="../assets/img/buho.png"
+                    class="w-full object-contain object-center lg:w-2/3 animate__animated animate__pulse animate__infinite animate__slower"
+                />
+                <article class="flex flex-col w-full">
+                    <h1 class="text-3xl text-white font-serif w-full">
+                        Buho <span class="text-primary">Protocol</span>
+                    </h1>
+                    <p class="text-gray">
+                        We create opportunities to optimize profits provided by
+                        the DeFi ecosystem on the BSC platform (Binance Smart
+                        Chain) as well as offering a series of versatile
+                        services and functions for the community.
+                    </p>
+                    <div
+                        class="counter mt-8 w-7/8 flex justify-between w-full flex-nowrap"
+                    >
+                        <div class="flex flex-col">
+                            <span class="text-primary text-3xl">30 :</span>
+                            <span>Days</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-primary text-3xl">09 :</span>
+                            <span>Hours</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-primary text-3xl">45 :</span>
+                            <span>Minutes</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-primary text-3xl">90</span>
+                            <span>Seconds</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="section relative">
+                <div class="background-one"></div>
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <img
+                        class="w-24 mx-auto mb-8"
+                        src="./../assets/img/logo.png"
+                        alt="Bubo protocol platform logo"
+                    />
+                    <article>
+                        <h2 class="text-3xl text-center mb-4">How it Works?</h2>
+                        <div class="flex">
+                            <img
+                                class="w-1/3 object-contain object-center"
+                                src="../assets/img/isotipo.png"
+                            />
+                            <p class="text-gray">
+                                <span class="text-primary">Bubo Protocol </span
+                                >users who want to supply the system assets, to
+                                be able to obtain benefits for it, they will be
+                                able to do it with Binance's native token (BNB),
+                                or with other assets running on the Binance
+                                Smart Chain. When users and applications
+                                provision assets to the protocol begin to obtain
+                                instantly, a derived income variable interest
+                                corresponding to each asset. Interest is
+                                accumulates in each block of BNB (compound
+                                interest), Users being able to withdraw their
+                                capital plus the interest generated two at any
+                                time.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section bg-cover bg-center" style="background-image: url(../assets/img/bg-2.png);">
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <h3 class="text-3xl mb-4 lg:pt-20">Token sale details</h3>
+                    <p class="text-gray mb-12">
+                        La cantidad de bTokens liberados es de 1,000,000. No se
+                        realizarán lanzamientos de tokens adicionales. La
+                        distribución de tokens tiene lugar 10 días después de
+                        que se complete la venta de tokens.
+                    </p>
+                    <div class="lg:flex flex-wrap justify-between">
+                        <div class="card mb-2">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-primary">BUBO</p>
+                                    <p>Token Symbol</p>
+                                </div>
+                                <img
+                                    src="../assets/img/token.png"
+                                    class="w-1/3 object-contain-object-center lg:w-24"
+                                />
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <p>Blockchain</p>
+                            <p class="text-primary">Binance, Bep20</p>
+                        </div>
+                        <div class="card mb-2">
+                            <p>Token Price</p>
+                            <p class="text-primary">0.033 BNB</p>
+                        </div>
+                        <div class="card mb-2">
+                            <p>Total Token Supply</p>
+                            <p class="text-primary">11,111,111 BUBO</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section bg-cover bg-top" style="background-image: url(../assets/img/bg-3.png);">
+                <article class="w-full lg:w-2/3 lg:mx-auto">
+                    <h4 class="text-3xl text-center mb-12 lg:pt-20">
+                        Pre-Sales <span class="text-primary">Bonus Token</span>
+                    </h4>
+                    <div class="lg:flex justify-between">
+                        <div
+                            class="p-8 border-gray border-2 rounded-xl mb-4 lg:mb-0"
+                        >
+                            <p class="text-2xl text-center">
+                                First<span class="text-primary"> Step </span>
+                            </p>
+                            <ul class="text-gray mt-4">
+                                <li class="magic-bullet">Start Date: 6, Jan</li>
+                                <li class="magic-bullet">End Date: 20, Jan</li>
+                                <li class="magic-bullet">
+                                    Token Price: $0.016 BNB
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-8 border-gray border-2 rounded-xl">
+                            <p class="text-2xl text-center">
+                                Second<span class="text-primary"> Step </span>
+                            </p>
+                            <ul class="text-gray mt-4">
+                                <li class="magic-bullet">
+                                    Start Date: 29, Nov
+                                </li>
+                                <li class="magic-bullet">End Date: 6, Dec</li>
+                                <li class="magic-bullet">
+                                    Token Price: $0.025 BNB
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="mt-24 w-full lg:w-2/3 lg:mx-auto">
+                    <h5 class="text-3xl mb-12 lg:text-center">
+                        The journey of <span class="text-primary">BUBO</span>
+                    </h5>
+                    <div class="timeline">
+                        <section class="flex items-center pb-12">
+                            <p class="text-xl text-primary w-1/2">1, Ene</p>
+                            <ul class="text-gray lg:text-xl">
+                                <li>Token</li>
+                                <li class="magic-bullet -ml-8">Whitepaper</li>
+                                <li class="ml-4 mb-2">Smart Contract</li>
+                                <li>Croudfunding</li>
+                                <li>Landing Page</li>
+                            </ul>
+                        </section>
+                        <section>
+                            <p class="text-xl text-primary w-1/2">6, Ene</p>
+                            <ul class="text-gray lg:text-xl">
+                                <li>Primera etapa de preventa</li>
+                                <li class="magic-bullet -ml-8">
+                                    Venta de tokens BUBO
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <p class="text-xl text-primary w-1/2">21, Ene</p>
+                            <ul class="text-gray lg:text-xl">
+                                <li class="magic-bullet -ml-8">
+                                    Segunda etapa de la preventa
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <p class="text-xl text-primary w-1/2">4, Feb</p>
+                            <ul class="text-gray lg:text-xl">
+                                <li>Finaliza segunda etapa de la preventa</li>
+                                <li
+                                    class="magic-bullet -ml-4 mt-4"
+                                    style="align-items: flex-start"
+                                >
+                                    Comienza a generar ganancias con BUBO Tokens
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="flex justify-center mt-12">
+                        <a
+                            class="button mr-4 w-1/2 lg:w-1/3"
+                            style="border: 1px solid rgba(255, 182, 26)"
+                            >Buy here</a
+                        >
+                        <a class="button w-1/2 lg:w-1/3" style="color: #707070"
+                            >Whitepaper</a
+                        >
+                    </div>
+                </article>
+            </section>
+
+            <section class="section">
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <h6 class="text-3xl lg:text-center">
+                        Token <span class="text-primary">Distribution</span>
+                    </h6>
+                    <div
+                        class="my-8 flex flex-col items-center lg:flex-row-reverse"
+                    >
+                        <div class="mb-12 lg:mb-0 lg:ml-8">
+                            <p class="text-lg font-bold lg:text-2xl lg:mb-4">
+                                Total <span class="text-primary">Supply</span>
+                            </p>
+                            <p class="text-gray lg:text-xl">11,111,111 BUBO</p>
+                        </div>
+                        <img
+                            class="w-full lg:w-2/3 object-contain object-center mr-4"
+                            src="../assets/img/token_distribution.png"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="section bg-gray-dark">
+                <h6 class="text-3xl mb-4 lg:text-center lg:py-20">
+                    Our <span class="text-primary">partners</span>
+                </h6>
+                <div class="partners">
+                    <img src="../assets/img/partners-1.png" />
+                    <img src="../assets/img/partners-2.png" />
+                    <img src="../assets/img/partners-3.png" />
+                    <img src="../assets/img/partners-4.png" />
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <h6 class="text-3xl mb-4 lg:text-center">
+                        Our <span class="text-primary">Team</span>
+                    </h6>
+                    <div class="flex w-full flex-wrap justify-between">
+                        <div class="w-1/3 text-center lg:w-1/6">
+                            <img
+                                class="object-contain object-center w-full"
+                                src="../assets/img/team-1.png"
+                            />
+                            <p class="font-bold">Alfredo Cortes</p>
+                            <p class="text-gray">CEO, Founder</p>
+                        </div>
+                        <div class="w-1/3 text-center lg:w-1/6">
+                            <img
+                                class="object-contain object-center w-full"
+                                src="../assets/img/team-2.png"
+                            />
+                            <p class="font-bold">Martin Lopez</p>
+                            <p class="text-gray">CO, Founder</p>
+                        </div>
+                        <div class="w-1/3 text-center lg:w-1/6">
+                            <img
+                                class="object-contain object-center w-full"
+                                src="../assets/img/team-3.png"
+                            />
+                            <p class="font-bold">Gil Robles</p>
+                            <p class="text-gray">Chief Designer</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-dark w-full p-8 flex justify-between lg:p-12">
+            <img
+                class="w-24 object-contain"
+                src="./../assets/img/logo.png"
+                alt="Bubo protocol platform logo"
+            />
+            <div class="ml-12 flex flex-wrap w-full justify-between lg:ml-24">
+                <div class="flex flex-col mr-4">
+                    <p class="font-bold">Useful Links</p>
+                    <a class="text-gray" href="#"> How it works</a>
+                    <a class="text-gray" href="#">Token sale details</a>
+                    <a class="text-gray" href="#">Team</a>
+                    <a class="text-gray" href="#">Roadmap</a>
+                </div>
+                <div class="flex flex-col mr-4">
+                    <p class="font-bold">Documents</p>
+                    <a class="text-gray" href="#">Whitepaper</a>
+                    <a class="text-gray" href="#">Privacy Policy</a>
+                    <a class="text-gray" href="#">Terms of Use</a>
+                </div>
+                <div class="flex flex-col mr-4">
+                    <p class="font-bold">Address</p>
+                    <a class="text-gray" href="#"> 21881 Blue Lake</a>
+                    <a class="text-gray" href="#">California, USA</a>
+                </div>
+                <div class="flex flex-col mr-4">
+                    <p class="font-bold">Connect</p>
+                    <a class="text-gray" href="#">info@bubo.com</a>
+                    <div class="flex w-full items-center justify-between">
+                        <a href="#">
+                            <img
+                                src="../assets/icons/medium.png"
+                                class="object-contain w-4 object-center"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="../assets/icons/youtube.png"
+                                class="object-contain w-4 object-center"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="../assets/icons/reddit.png"
+                                class="object-contain w-4 object-center"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="../assets/icons/twitter.png"
+                                class="object-contain w-4 object-center"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="../assets/icons/direct.png"
+                                class="object-contain w-4 object-center"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
+    <script src="./index.js" type="text/javascript"></script>
 </html>

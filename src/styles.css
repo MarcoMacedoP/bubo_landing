@@ -4,6 +4,12 @@
     font-weight: normal;
     src: url("../assets/fonts/sf-ui.woff") format("woff");
 }
+@font-face {
+    font-family: "Century-Gothic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/centuty_gothic_bold.ttf") format("ttf");
+}
 
 @tailwind base;
 
@@ -17,4 +23,219 @@ html {
 
 body {
     @apply font-sans;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.underline {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid red;
+    @apply border-primary;
+}
+nav {
+    background-color: red;
+    z-index: 99;
+}
+.menu-icon {
+    @apply w-8 h-8  cursor-pointer  fill-current text-white transition-colors duration-300 ease-in;
+}
+.menu-icon:hover,
+.menu-icon:focus,
+.menu-icon:active {
+    @apply text-primary;
+}
+
+.menu {
+    background-color: transparent;
+    @apply duration-200 ease-in fixed h-screen top-0;
+    transition-property: background-color, width;
+}
+.menu.open {
+    @apply w-screen fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.menu .content {
+    @apply w-0 h-screen overflow-hidden relative p-0 bg-dark;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+    transition-property: padding, width;
+    z-index: 2;
+}
+
+.menu.open .content {
+    @apply fixed p-12 left-0;
+    width: calc(100% - 2rem);
+    z-index: 1;
+}
+.menu a,
+.close-btn {
+    @apply block font-serif text-lg cursor-pointer;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+.menu .close-btn {
+    @apply absolute;
+    right: 3rem;
+    text-align: right;
+    font-size: 2rem;
+}
+
+.menu.open a,
+.menu.open .close-btn {
+    opacity: 1;
+}
+
+.menu a:hover,
+.close-btn:hover,
+.menu a:active,
+.close-btn:active,
+.menu a:focus,
+.close-btn:focus {
+    @apply text-primary;
+}
+
+/** buttons  **/
+.__button {
+    @apply font-serif text-lg text-center border-gray border-2;
+    cursor: pointer;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: opacity 300ms ease-in;
+}
+.__button:hover {
+    opacity: 0.5;
+}
+.button {
+    @apply __button text-primary;
+}
+.button-primary {
+    @apply __button bg-primary text-dark;
+}
+
+/**containers **/
+.section {
+    @apply w-full px-8 pb-16;
+}
+.section .text-3xl {
+    font-weight: bold;
+}
+.card {
+    @apply text-xl text-white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+}
+.partners {
+    @apply mb-24;
+}
+.partners img {
+    @apply object-contain object-center w-full border-2 border-gray border-t-0 border-l-0;
+}
+
+/**list**/
+li {
+    list-style: disc;
+}
+.magic-bullet {
+    @apply flex items-center;
+    list-style: none;
+}
+
+.magic-bullet::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/icons/bullet-shine.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/** Timeline /**/
+.timeline {
+    position: relative;
+}
+.timeline::before {
+    content: "";
+    @apply absolute top-0 h-full bg-gray;
+    left: 48%;
+    z-index: -1;
+    width: 2px;
+    opacity: 0.5;
+}
+.timeline section {
+    @apply flex items-center pb-12;
+}
+.timeline ul {
+    width: 40%;
+}
+/** Backgrounds */
+.background-one {
+    background-image: url("../assets/img/bg-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: -3rem;
+    right: 0;
+    height: 120vh;
+    width: 120vw;
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 19px;
+    }
+    .menu-icon {
+        display: none;
+    }
+    .menu {
+        height: 100%;
+        position: relative;
+        background-color: transparent;
+        width: 40%;
+    }
+    /** menu **/
+    .menu .content {
+        @apply w-full h-8 static;
+        @apply flex justify-around items-center;
+    }
+    .menu a {
+        opacity: 1;
+    }
+    .close-btn {
+        display: none;
+    }
+    /**containers **/
+    .section {
+        @apply w-full;
+        padding: 0 3rem 200px 3rem;
+    }
+    .section .text-3xl {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .card {
+        margin-bottom: 1rem;
+        height: 150px;
+        width: 48%;
+    }
+    .partners {
+        @apply flex;
+    }
+    .partners img {
+        height: 5rem;
+        width: 25%;
+        padding: 1rem;
+    }
+    .partners img:last-child {
+        border-right: 0;
+    }
+    .counter {
+        max-width: 415px;
+    }
 }
