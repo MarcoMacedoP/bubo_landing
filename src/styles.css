@@ -12,6 +12,7 @@
 html {
     @apply bg-dark text-white font-sans;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
