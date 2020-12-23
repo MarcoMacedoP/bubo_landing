@@ -4,12 +4,6 @@
     font-weight: normal;
     src: url("../assets/fonts/sf-ui.woff") format("woff");
 }
-@font-face {
-    font-family: "Century-Gothic";
-    font-style: normal;
-    font-weight: normal;
-    src: url("../assets/fonts/centuty_gothic_bold.ttf") format("ttf");
-}
 
 @tailwind base;
 @tailwind components;
@@ -167,6 +161,10 @@ li {
 .timeline ul {
     width: 40%;
 }
+/** Token Distribution */
+.token-distribution-img {
+    @apply object-contain object-center mr-4 w-full;
+}
 /** Backgrounds */
 .background-one {
     background-image: url("../assets/img/bg-1.svg");
@@ -182,6 +180,7 @@ li {
 }
 
 @media (min-width: 1024px) {
+    /* Equivalent of lg tailwind class**/
     html {
         font-size: 19px;
     }
@@ -208,7 +207,7 @@ li {
     /**containers **/
     .section {
         @apply w-full;
-        padding: 0 3rem 200px 3rem;
+        padding: 5rem 3rem;
     }
     .section .text-3xl {
         font-size: 3rem;
@@ -229,6 +228,12 @@ li {
     }
     .partners img:last-child {
         border-right: 0;
+    }
+    .token-distribution-img {
+        @apply w-2/3;
+        margin: 0;
+        position: relative;
+        right: 5rem;
     }
     .counter {
         max-width: 415px;
