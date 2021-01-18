@@ -113,10 +113,17 @@ nav {
     font-weight: bold;
 }
 .card {
-    @apply text-xl text-white;
+    @apply text-white;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     padding: 1rem 1.5rem;
+}
+.card p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+.card .text-primary {
+    font-size: 1rem;
 }
 .counter {
     @apply mt-4 flex justify-between w-full flex-nowrap;
