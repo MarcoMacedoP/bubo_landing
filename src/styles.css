@@ -118,6 +118,9 @@ nav {
     border-radius: 0.5rem;
     padding: 1rem 1.5rem;
 }
+.counter {
+    @apply mt-4 flex justify-between w-full flex-nowrap;
+}
 .partners {
     @apply mb-24;
 }
@@ -174,9 +177,9 @@ li {
     z-index: -1;
     position: absolute;
     bottom: 0;
-    left: -6rem;
+    left: -20vw;
     right: 0;
-    height: 130vh;
+    height: 115vh;
     width: 120vw;
 }
 
@@ -237,7 +240,6 @@ li {
         right: 5rem;
     }
     .counter {
-        @apply mt-4 flex justify-between w-full flex-nowrap;
         width: 87.5%;
         max-width: 415px;
     }
