@@ -237,6 +237,8 @@ li {
         right: 5rem;
     }
     .counter {
+        @apply mt-4 flex justify-between w-full flex-nowrap;
+        width: 87.5%;
         max-width: 415px;
     }
 }
