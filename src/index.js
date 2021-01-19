@@ -8,7 +8,7 @@ openMenuButton.addEventListener("click", toggleMenu);
 closeMenuButton.addEventListener("click", toggleMenu);
 
 // Set the date we're counting down to
-const countDownDate = new Date("Jan 20, 2021 00:00:00").getTime();
+const countDownDate = new Date("Jan 27, 2021 00:00:00").getTime();
 
 // Update the count down every 1 second
 setInterval(() => {

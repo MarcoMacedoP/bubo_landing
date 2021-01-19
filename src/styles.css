@@ -134,7 +134,15 @@ nav {
 .partners img {
     @apply object-contain object-center w-full border-2 border-gray border-t-0 border-l-0;
 }
-
+/** Texts stuff **/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-serif text-3xl;
+}
 /**list**/
 li {
     list-style: disc;
