@@ -30,19 +30,27 @@ setInterval(() => {
     document.getElementById(
         "counter"
     ).innerHTML = ` <div class="flex flex-col" >
-                            <span class="text-primary text-3xl">${days} :</span>
+                            <span class="text-primary text-3xl">${
+                                days > 10 ? days : `0${days}`
+                            } :</span>
                             <span>Days</span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="text-primary text-3xl">${hours} :</span>
+                            <span class="text-primary text-3xl">${
+                                hours > 10 ? hours : `0${hours}`
+                            } :</span>
                             <span>Hours</span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="text-primary text-3xl">${minutes} :</span>
+                            <span class="text-primary text-3xl">${
+                                minutes > 10 ? minutes : `0${minutes}`
+                            } :</span>
                             <span>Minutes</span>
                         </div>
                         <div class="flex flex-col">
-                            <span class="text-primary text-3xl">${seconds}</span>
+                            <span class="text-primary text-3xl">${
+                                seconds > 10 ? seconds : `0${seconds}`
+                            }</span>
                             <span>Seconds</span>
                         </div>
  `;
