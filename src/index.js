@@ -1,3 +1,36 @@
+import whitepaperEs from "../assets/docs/whitepaper_es.pdf";
+import whitepaperEn from "../assets/docs/whitepaper_en.pdf";
+
+const lang = window.navigator.language;
+const docs = { whitepaper: null };
+
+const loadSpanishDocs = () => {
+    docs.whitepaper = whitepaperEs;
+    console.log("loaded spanish docs", docs);
+};
+
+const loadEngDocs = () => {
+    docs.whitepaper = whitepaperEn;
+    console.log("loaded eng docs", docs);
+};
+
+const isSpanish = /[es]/.test(lang);
+
+if (isSpanish) {
+    loadSpanishDocs();
+} else {
+    loadEngDocs();
+}
+const onWhitepaperButtonClick = () => window.open(docs.whitepaper);
+
+const whitepaperButtons = document.querySelectorAll(".whitepaper-btn");
+
+whitepaperButtons.forEach((btn) =>
+    btn.addEventListener("click", onWhitepaperButtonClick)
+);
+
+/** Menu stuff **/
+
 const openMenuButton = document.querySelector(".menu-icon");
 const closeMenuButton = document.querySelector(".close-btn");
 
@@ -6,6 +39,8 @@ const menu = document.querySelector(".menu");
 const toggleMenu = () => menu.classList.toggle("open");
 openMenuButton.addEventListener("click", toggleMenu);
 closeMenuButton.addEventListener("click", toggleMenu);
+
+/** Counter stuff **/
 
 // Set the date we're counting down to
 const countDownDate = new Date("Jan 27, 2021 00:00:00").getTime();

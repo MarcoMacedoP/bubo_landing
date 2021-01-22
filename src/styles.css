@@ -1,7 +1,7 @@
 @font-face {
     font-family: "SF UI";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     src: url("../assets/fonts/sf-ui.woff") format("woff");
 }
 
@@ -24,6 +24,9 @@ body {
 nav {
     background-color: red;
     z-index: 99;
+}
+a {
+    cursor: pointer;
 }
 .menu-icon {
     @apply w-8 h-8  cursor-pointer  fill-current text-white transition-colors duration-300 ease-in;
