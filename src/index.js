@@ -43,10 +43,10 @@ closeMenuButton.addEventListener("click", toggleMenu);
 /** Counter stuff **/
 
 // Set the date we're counting down to
-const countDownDate = new Date("Jan 27, 2021 00:00:00").getTime();
+const countDownDate = new Date("Feb 27, 2021 00:00:00").getTime();
 
 // Update the count down every 1 second
-setInterval(() => {
+setInterval((handler) => {
     // Get today's date and time
     const now = new Date().getTime();
 
@@ -62,29 +62,30 @@ setInterval(() => {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
+    console.log({ days, hours, minutes, seconds });
     document.getElementById(
         "counter"
     ).innerHTML = ` <div class="flex flex-col" >
                             <span class="text-primary text-3xl">${
-                                days > 10 ? days : `0${days}`
+                                days > 9 ? days : `0${days}`
                             } :</span>
                             <span>Days</span>
                         </div>
                         <div class="flex flex-col">
                             <span class="text-primary text-3xl">${
-                                hours > 10 ? hours : `0${hours}`
+                                hours > 9 ? hours : `0${hours}`
                             } :</span>
                             <span>Hours</span>
                         </div>
                         <div class="flex flex-col">
                             <span class="text-primary text-3xl">${
-                                minutes > 10 ? minutes : `0${minutes}`
+                                minutes > 9 ? minutes : `0${minutes}`
                             } :</span>
                             <span>Minutes</span>
                         </div>
                         <div class="flex flex-col">
                             <span class="text-primary text-3xl">${
-                                seconds > 10 ? seconds : `0${seconds}`
+                                seconds > 9 ? seconds : `0${seconds}`
                             }</span>
                             <span>Seconds</span>
                         </div>
@@ -92,7 +93,7 @@ setInterval(() => {
 
     // If the count down is finished, write some text
     if (distance < 0) {
-        clearInterval(x);
+        clearInterval(handler);
         document.getElementById("counter").innerHTML = "EXPIRED";
     }
 }, 1000);

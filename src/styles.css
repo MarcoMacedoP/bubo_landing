@@ -91,10 +91,12 @@ a {
 
 /** buttons  **/
 .__button {
-    @apply font-serif text-lg text-center border-gray border-2;
+    @apply font-serif text-lg text-center;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
     border-radius: 2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
     font-weight: bold;
     transition: opacity 300ms ease-in;
 }
@@ -105,7 +107,7 @@ a {
     @apply __button text-primary;
 }
 .button-primary {
-    @apply __button bg-primary text-dark;
+    @apply __button bg-primary text-dark border-0;
 }
 
 /**containers **/
